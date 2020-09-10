@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="7dp"
+    app:cardElevation="7dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_height="70dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="@string/app_name"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableLeft="@drawable/star"
+            android:textColor="@android:color/black"
+            android:text="5.0(200+) | All Days : 09:00 AM - 06:00 PM"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/call"
+                android:textColor="@android:color/black"
+                android:text="Reach us at : 9815072369"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+        </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+        <Button
+            android:id="@+id/booktable"
+
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btnshape"
+            android:textColor="@android:color/white"
+            android:text="BOOK TABLE"
+
+
+
+            >
+
+        </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/recycler_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="Item Name"/>
+
+        <TextView
+            android:id="@+id/recycler_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="  padrones tempura, gamdas"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:padding="5dp"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/euro"
+            android:text="€7"/>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recycler_elegant_btn"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="80dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardBackgroundColor="@color/euro"
+
+        android:layout_height="25dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="76dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+
+            <Button
+                android:id="@+id/recycler_elegant_sub"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@drawable/subtractfab">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/recycler_val_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+            <Button
+                android:id="@+id/recycler_elegant_add"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@drawable/addfab">
+
+            </Button>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/recycler_add_btn"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:background="@color/euro"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="Add +"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

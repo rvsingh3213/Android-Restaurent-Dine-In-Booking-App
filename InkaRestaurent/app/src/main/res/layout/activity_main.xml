@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/food_icon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/food"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/food_icon_layout"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_ac"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@+id/empty_layout"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/starter_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starter"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/starter_text_view">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="Guac De La Costa"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="  tortillas de mais, fruit de la passaion"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:padding="5dp"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/euro"
+                        android:text="€7"/>
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/one_btn"
+                    layout="@layout/elegantbutton"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="invisible"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    >            </include>
+                <Button
+                    android:id="@+id/one_add_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@color/euro"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:text="Add +"
+                    android:textColor="@android:color/white"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="Chicharron y Cerveza"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="  citron vert / Corona sauce"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:padding="5dp"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/euro"
+                        android:text="€7"/>
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/two_btn"
+                    layout="@layout/elegantbutton2"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:visibility="invisible"
+                    android:layout_centerVertical="true"
+                    >            </include>
+                <Button
+                    android:id="@+id/two_add_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@color/euro"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:text="Add +"
+                    android:textColor="@android:color/white"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/starter_text_view">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="Chilitos con con"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="  padrones tempura, gamdas"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:padding="5dp"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/euro"
+                        android:text="€7"/>
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/three_btn"
+                    layout="@layout/elegantbutton3"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:visibility="invisible"></include>
+                <Button
+                    android:id="@+id/three_add_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@color/euro"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:text="Add +"
+                    android:textColor="@android:color/white"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+
+    <include layout="@layout/cartnavigationbar"
+        ></include>
+
+   <include layout="@layout/recyclercard"
+       android:layout_marginTop="100dp"
+       android:layout_centerHorizontal="true"
+       android:layout_height="200dp"
+       android:layout_width="370dp"
+       ></include>
+
+
+
+
+
+</RelativeLayout>

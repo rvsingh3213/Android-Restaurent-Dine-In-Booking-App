@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/euro"
+
+    android:layout_height="25dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="76dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
+
+        <Button
+            android:id="@+id/elegant2_btn_sub"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@drawable/subtractfab">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/elegant2_btn_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/elegant2_btn_add"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/addfab">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.cardview.widget.CardView>
