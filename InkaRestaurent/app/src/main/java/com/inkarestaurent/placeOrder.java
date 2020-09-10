@@ -51,6 +51,7 @@ public class placeOrder extends AppCompatActivity {
         second_item_count=findViewById(R.id.second_item_count);
         third_item_count=findViewById(R.id.third_item_count);
 
+
         //count quantity buttons
 
         first_item_add=findViewById(R.id.first_item_add);
@@ -78,7 +79,7 @@ public class placeOrder extends AppCompatActivity {
                 {
                     count++;
                     totalItems++;
-                 
+                    totalCost.setText("€"+String.valueOf(totalItems*7)+".00");
                     first_item_count.setText(String.valueOf(count));
                 }
             }
@@ -88,7 +89,7 @@ public class placeOrder extends AppCompatActivity {
             public void onClick(View v) {
                 int count=Integer.parseInt(first_item_count.getText().toString());
                 totalItems--;
-
+                totalCost.setText("€"+String.valueOf(totalItems*7)+".00");
                 if(count==1)
                 {
                     first_item_cart.setVisibility(View.GONE);
@@ -109,6 +110,7 @@ public class placeOrder extends AppCompatActivity {
                 {
                     count++;
                     totalItems++;
+                    totalCost.setText("€"+String.valueOf(totalItems*7)+".00");
 
                     second_item_count.setText(String.valueOf(count));
                 }
@@ -118,8 +120,9 @@ public class placeOrder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int count=Integer.parseInt(second_item_count.getText().toString());
-                totalItems--;
 
+                totalItems--;
+                totalCost.setText("€"+String.valueOf(totalItems*7)+".00");
                 if(count==1)
                 {
                     second_item_cart.setVisibility(View.GONE);
@@ -140,7 +143,7 @@ public class placeOrder extends AppCompatActivity {
                 {
                     count++;
                     totalItems++;
-
+                    totalCost.setText("€"+String.valueOf(totalItems*7)+".00");
                     third_item_count.setText(String.valueOf(count));
                 }
             }
@@ -150,7 +153,7 @@ public class placeOrder extends AppCompatActivity {
             public void onClick(View v) {
                 int count=Integer.parseInt(third_item_count.getText().toString());
                 totalItems--;
-               // totalCost.setText("€"+String.valueOf(totalItems*7)+".00"); if(count==1)
+                totalCost.setText("€"+String.valueOf(totalItems*7)+".00"); if(count==1)
                 {
                     third_item_cart.setVisibility(View.GONE);
 
@@ -177,7 +180,7 @@ public class placeOrder extends AppCompatActivity {
         totalCost=findViewById(R.id.total_cost_txt);
         int totalCount=Integer.parseInt(intent.getStringExtra("totalCount"));
         int totalItem=Integer.parseInt(intent.getStringExtra("countItem"));
-        totalItems=totalItem;
+        totalItems=totalCount;
         String itemString=intent.getStringExtra("itemsString");
 
 
