@@ -1,6 +1,7 @@
 package com.inkarestaurent;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -282,6 +283,52 @@ public class MainActivity extends AppCompatActivity  {
         return s;
 
 
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        String TAG = getClass().toString().trim();
+        Log.i(TAG, "Here i came::");
+        if (requestCode == 1)
+            if (resultCode == RESULT_OK) {
+                String Count = data.getStringExtra("cartAllItems");
+
+
+                int arr[] = new int[3];
+                String str[] = Count.split("\\s+");
+                for (int i = 0; i < 3; i++)
+                    arr[i] = Integer.parseInt(str[i]);
+
+                if (arr[0] == 0) {
+                    one_txt.setText("0");
+                    one_btn.setVisibility(View.INVISIBLE);
+                    one_add_btn.setVisibility(View.VISIBLE);
+                } else {
+                    one_txt.setText(String.valueOf(arr[0]));
+                }
+
+                if (arr[1] == 0) {
+                    two_txt.setText("0");
+                    two_btn.setVisibility(View.INVISIBLE);
+                    two_add_btn.setVisibility(View.VISIBLE);
+                } else {
+                    two_txt.setText(String.valueOf(arr[1]));
+                }
+
+                if (arr[2] == 0) {
+                    three_txt.setText("0");
+                    three_btn.setVisibility(View.INVISIBLE);
+                    three_add_btn.setVisibility(View.VISIBLE);
+                } else {
+                    three_txt.setText(String.valueOf(arr[2]));
+                }
+
+
+            }
 
     }
 }

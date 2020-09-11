@@ -228,8 +228,12 @@ public class placeOrder extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
 
-        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        Intent intentBack=new Intent(getApplicationContext(),MainActivity.class);
+        String items=first_item_count.getText().toString()+" "+second_item_count.getText().toString()+" "+third_item_count.getText().toString();
 
+        intentBack.putExtra("cartAllItems",items);
+        setResult(RESULT_OK,intentBack);
+       finish();
 
     }
 }
